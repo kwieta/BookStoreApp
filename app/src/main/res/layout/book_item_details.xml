@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_light_gray"
+    android:orientation="vertical"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_margin">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/colorPrimary"
+                tools:text="Book Title" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/darker_gray"
+                tools:text="Author Ofthebook" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#767676"
+                tools:text="2017" />
+
+            <TextView
+                android:id="@+id/publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#b0bec5"
+                tools:text="Publisher" />
+
+            <TextView
+                android:id="@+id/pages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#767676"
+                tools:text="420 pages" />
+
+            <TextView
+                android:id="@+id/cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#767676"
+                tools:text="Hard cover" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#767676"
+                tools:text="30" />
+
+            <LinearLayout
+                android:id="@+id/buttons_in_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_edit_details"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif"
+                    android:onClick="btn_edit_details"
+                    android:text="@string/edit_book"
+                    android:textColor="@android:color/white"
+                    tools:text="Edit book" />
+
+                <Button
+                    android:id="@+id/btn_delete_book"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/holo_red_light"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif"
+                    android:onClick="btn_delete_book"
+                    android:text="@string/delete"
+                    android:textColor="@android:color/white"
+                    tools:text="Delete" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="16dp"
+                    android:text="@string/stock_info"
+                    android:textAllCaps="true"
+                    tools:text="Stock info" />
+
+                <Button
+                    android:id="@+id/decr"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="@android:color/white"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif"
+                    android:onClick="btn_decr"
+                    android:text="@string/decr"
+                    android:textColor="@android:color/black"
+                    tools:text="-1" />
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingEnd="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp"
+                    tools:text="10" />
+
+                <Button
+                    android:id="@+id/incr"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="@android:color/white"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif"
+                    android:onClick="btn_incr"
+                    android:text="@string/incr"
+                    android:textColor="@android:color/black"
+                    tools:text="+1" />
+
+                <Button
+                    android:id="@+id/btn_order_call"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif"
+                    android:onClick="btn_order_call"
+                    android:text="@string/order_call"
+                    android:textColor="@android:color/white"
+                    tools:text="Order" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+

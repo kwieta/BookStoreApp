@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textColor="@color/colorPrimary"
+                tools:text="Title" />
+
+            <EditText
+                android:id="@+id/edit_book_title"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_book_title"
+                android:inputType="textCapWords"
+                android:textColorHint="@android:color/holo_green_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/author"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edit_book_author"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_book_author"
+                android:inputType="textAutoComplete"
+                android:textColorHint="@android:color/holo_green_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/year"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edit_book_year"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_book_year"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/pages"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edit_book_pages"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_book_pages"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/quantity"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edit_book_quantity"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_book_quantity"
+                android:inputType="number"
+                android:textColorHint="@android:color/holo_green_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edit_book_price"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_book_price"
+                android:inputType="numberDecimal"
+                android:textColorHint="@android:color/holo_green_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/publisher"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edit_book_publisher"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_book_publisher"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edit_phone_number"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/edit_phone_number"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cover"
+                    android:textColor="@color/colorPrimary" />
+                <!-- Book cover type drop-down spinner -->
+                <Spinner
+                    android:id="@+id/spinner_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:paddingRight="16dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

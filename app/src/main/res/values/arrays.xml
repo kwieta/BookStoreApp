@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- These are the options displayed in the book cover type drop-down Spinner -->
+    <string-array name="array_cover_options">
+        <item>@string/cover_unknown</item>
+        <item>@string/cover_hard</item>
+        <item>@string/cover_soft</item>
+    </string-array>
+</resources>
